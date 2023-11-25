@@ -17,7 +17,7 @@ export const Landing = () => {
         <section className={styles.info}>
           <img
             className={styles.picture}
-            src="./aquatech/sensors.png"
+            src="./sensors.png"
             alt="Датчики"
           />
           <div className={styles.content}>
@@ -49,14 +49,14 @@ export const Landing = () => {
           </div>
           <img
             className={styles.picture}
-            src="./aquatech/diver.png"
+            src="./diver.png"
             alt="Дайвер"
           />
         </section>
         <section className={styles.info}>
           <img
             className={styles.picture}
-            src="./aquatech/smartdive.png"
+            src="./smartdive.png"
             alt="Очки SmartDive"
           />
           <div className={styles.content}>

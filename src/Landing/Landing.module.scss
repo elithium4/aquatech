@@ -1,0 +1,101 @@
+.Body {
+    // background: linear-gradient(180deg, #31c7e5 0%, #24518e 33.33%, #212264 66.67%, #15153a 89.06%);
+    background: #000100;
+    width: 100vw;
+    min-height: 100vh;
+    color: #fff;
+    .header {
+        text-align: center;
+        padding: 16px;
+        font-family: "Quicksand", sans-serif;
+        letter-spacing: 4px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        .logoName {
+            font-weight: 600;
+            font-size: 40px;
+            letter-spacing: 4px;
+            margin: 0;
+        }
+    }
+
+    .banner {
+        margin: 10px 0 50px;
+        background: url("../assets/landing-big.png");
+        background-size: 100% auto;
+        width: 100vw;
+        background-size: cover;
+        height: 310px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        position: relative;
+
+        .bannerTitle {
+            box-sizing: border-box;
+            position: absolute;
+            bottom: -20px;
+            margin: 0;
+            padding: 0 10%;
+            font-weight: 400;
+            font-size: 35px;
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        .info {
+            padding: 16px 10%;
+            display: flex;
+            gap: 50px;
+
+            .picture {
+                width: 300px;
+                height: 300px;
+            }
+
+            .content {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                flex-grow: 1;
+
+                .title {
+                    font-weight: 500;
+                    letter-spacing: 2px;
+                }
+
+                .list {
+                    padding-left: 10px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 16px;
+                }
+            }
+        }
+
+        .clarification {
+            margin-top: 20px;
+            display: block;
+            font-size: 12px;
+            padding: 0 10%;
+        }
+    }
+
+    .footer {
+        padding: 50px 10% 16px;
+        display: flex;
+        justify-content: space-between;
+
+        .link {
+            display: block;
+            color: #fff;
+            text-decoration: none;
+            margin-bottom: 8px;
+        }
+    }
+}

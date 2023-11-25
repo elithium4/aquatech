@@ -1,7 +1,14 @@
+@property --angle {
+    syntax: '<angle>';
+    initial-value: 90deg;
+    inherits: true;
+  }
+
+
 .Body {
     // background: linear-gradient(180deg, #31c7e5 0%, #24518e 33.33%, #212264 66.67%, #15153a 89.06%);
     background: #000100;
-    width: 100vw;
+    width: 100%;
     min-height: 100vh;
     color: #fff;
     .header {
@@ -24,7 +31,7 @@
         margin: 10px 0 50px;
         background: url("../assets/landing-big.png");
         background-size: 100% auto;
-        width: 100vw;
+        width: 100%;
         background-size: cover;
         height: 310px;
         background-repeat: no-repeat;
@@ -48,10 +55,13 @@
         display: flex;
         flex-direction: column;
         gap: 40px;
+        padding: 16px 300px;
         .info {
-            padding: 16px 10%;
             display: flex;
+            justify-content: flex-start;
             gap: 50px;
+            border-top: 1px solid #fff;
+            padding: 50px 0 50px;
 
             .picture {
                 width: 300px;
@@ -78,24 +88,65 @@
             }
         }
 
+        .mainLink {
+            margin: 20px auto 0;
+            --angle: 90deg;
+            color: #fff;
+            text-decoration: none;
+            width: 300px;
+            box-sizing: border-box;
+            font-size: 20px;
+            text-align: center;
+            font-weight: 500;
+            letter-spacing: 2px;
+            display: block;
+            padding: 20px;
+            box-sizing: border-box;
+            border: 2px solid;
+            border-image: conic-gradient(
+                    from var(--angle),
+                    rgba(168, 239, 255, 0.1),
+                    rgba(168, 239, 255, 1) 0.1turn,
+                    rgba(168, 239, 255, 1) 0.15turn,
+                    rgba(168, 239, 255, 0.1) 0.25turn
+                )
+                30;
+            animation: borderRotate 2.5s linear infinite forwards;
+
+            &:hover {
+                cursor: pointer;
+                text-shadow: -2px 2px 2px #b2e7ebcb
+            }
+        }
+
         .clarification {
             margin-top: 20px;
             display: block;
             font-size: 12px;
-            padding: 0 10%;
         }
     }
 
     .footer {
-        padding: 50px 10% 16px;
-        display: flex;
-        justify-content: space-between;
+        margin-top: 20px;
+        border-top: 1px solid #fff;
 
-        .link {
-            display: block;
-            color: #fff;
-            text-decoration: none;
-            margin-bottom: 8px;
+        .footerContent {
+            padding: 30px 0 16px;
+            display: flex;
+            justify-content: space-between;
+            .link {
+                display: block;
+                color: #fff;
+                text-decoration: none;
+                margin-bottom: 8px;
+            }
         }
+    }
+}
+
+
+@keyframes borderRotate {
+    100% {
+        --angle: 420deg;
     }
 }

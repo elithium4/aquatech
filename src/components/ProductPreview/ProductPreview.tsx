@@ -21,7 +21,7 @@ export const ProductPreview = ({
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
-      <img src={`./aquatech/${previewUrl}`} alt={name} className={styles.image} />
+      <img src={`./${previewUrl}`} alt={name} className={styles.image} />
       <div className={styles.textBlock} style={isHovered ? hoveredStyle : {}}>
         <h2 className={styles.title}>{name}</h2>
         <p className={styles.description}>{description}</p>

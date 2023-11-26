@@ -2,15 +2,11 @@ import { Link } from "react-router-dom";
 import styles from "./Landing.module.scss";
 import globalCss from '../global.module.scss'
 import { posts } from "../const/landing";
-import { Feature } from "../components/Feature";
+import { Feature } from "../components/Feature/Feature";
 
 export const Landing = () => {
   return (
     <div className={styles.Body}>
-      <header className={styles.header}>
-        <h2 className={styles.logoName}>AquaTech</h2>
-        <div className={styles.subheader}>погружение в будущее</div>
-      </header>
       <div className={styles.banner}>
         <h1 className={`${globalCss.desktopOnly} ${styles.bannerTitle}`}>
           ProSuit - Гидрокостюмы нового поколения

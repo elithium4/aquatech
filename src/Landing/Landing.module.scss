@@ -5,38 +5,7 @@
 }
 
 .Body {
-    // background: linear-gradient(180deg, #31c7e5 0%, #24518e 33.33%, #212264 66.67%, #15153a 89.06%);
-    background: #000100;
-    width: 100%;
-    min-height: 100vh;
-    color: #fff;
-    .header {
-        text-align: center;
-        padding: 16px;
-        font-family: "Quicksand", sans-serif;
-        letter-spacing: 4px;
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
-        .logoName {
-            font-weight: 600;
-            font-size: 40px;
-            letter-spacing: 4px;
-            margin: 0;
-
-            @media screen and (max-width: 430px) {
-                font-size: 30px;
-            }
-        }
-
-        .subheader {
-            @media screen and (max-width: 430px) {
-                font-size: 13px;
-            }
-        }
-    }
-
-    .banner {
+ .banner {
         margin: 10px 0 50px;
         background: url("../assets/landing-big.png");
         background-size: 100% auto;

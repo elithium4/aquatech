@@ -1,0 +1,10 @@
+.Products {
+    width: 100%;
+    padding: 30px 300px;
+    background-color: #000100;
+    box-sizing: border-box;
+
+    @media screen and (max-width: 1300px) {
+        padding: 30px 0px;
+    }
+}

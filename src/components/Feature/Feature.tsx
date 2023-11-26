@@ -1,6 +1,6 @@
-import { LandingPost } from "../interfaces/landing";
+import { LandingPost } from "@interfaces/landing";
 import styles from "./Feature.module.scss";
-import globalCss from "../global.module.scss";
+import globalCss from "../../global.module.scss";
 
 export const Feature = ({ imgUrl, imgAlt, title, listItems }: LandingPost) => {
   return (

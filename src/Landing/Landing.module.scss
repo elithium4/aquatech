@@ -1,9 +1,8 @@
 @property --angle {
-    syntax: '<angle>';
+    syntax: "<angle>";
     initial-value: 90deg;
     inherits: true;
-  }
-
+}
 
 .Body {
     // background: linear-gradient(180deg, #31c7e5 0%, #24518e 33.33%, #212264 66.67%, #15153a 89.06%);
@@ -24,6 +23,16 @@
             font-size: 40px;
             letter-spacing: 4px;
             margin: 0;
+
+            @media screen and (max-width: 430px) {
+                font-size: 30px;
+            }
+        }
+
+        .subheader {
+            @media screen and (max-width: 430px) {
+                font-size: 13px;
+            }
         }
     }
 
@@ -31,6 +40,17 @@
         margin: 10px 0 50px;
         background: url("../assets/landing-big.png");
         background-size: 100% auto;
+
+        @media screen and (max-width: 1300px) {
+            background-size: 150% auto;
+        }
+        @media screen and (max-width: 950px) {
+            background-size: 200% auto;
+        }
+
+        @media screen and (max-width: 430px) {
+            height: 150px;
+        }
         width: 100%;
         background-size: cover;
         height: 310px;
@@ -43,12 +63,27 @@
             position: absolute;
             bottom: -20px;
             margin: 0;
-            padding: 0 10%;
+            padding: 0 300px;
             font-weight: 400;
             font-size: 35px;
             width: 100%;
             text-align: center;
+
+            @media screen and (max-width: 740px) {
+                font-size: 25px;
+                bottom: -15px;
+                padding: 0 8px;
+            }
         }
+
+        @media screen and (max-width: 610px) {
+            margin-bottom: 8px;
+        }
+    }
+
+    .title {
+        padding: 0 8px;
+        font-size: 30px;
     }
 
     .wrapper {
@@ -56,36 +91,13 @@
         flex-direction: column;
         gap: 40px;
         padding: 16px 300px;
-        .info {
-            display: flex;
-            justify-content: flex-start;
-            gap: 50px;
-            border-top: 1px solid #fff;
-            padding: 50px 0 50px;
 
-            .picture {
-                width: 300px;
-                height: 300px;
-            }
+        @media screen and (max-width: 1300px) {
+            padding: 16px 20px;
+        }
 
-            .content {
-                display: flex;
-                flex-direction: column;
-                justify-content: space-around;
-                flex-grow: 1;
-
-                .title {
-                    font-weight: 500;
-                    letter-spacing: 2px;
-                }
-
-                .list {
-                    padding-left: 10px;
-                    display: flex;
-                    flex-direction: column;
-                    gap: 16px;
-                }
-            }
+        @media screen and (max-width: 610px) {
+            gap: 20px;
         }
 
         .mainLink {
@@ -113,9 +125,13 @@
                 30;
             animation: borderRotate 2.5s linear infinite forwards;
 
+            @media screen and (max-width: 610px) {
+                margin-top: 0;
+            }
+
             &:hover {
                 cursor: pointer;
-                text-shadow: -2px 2px 2px #b2e7ebcb
+                text-shadow: -2px 2px 2px #b2e7ebcb;
             }
         }
 
@@ -134,16 +150,27 @@
             padding: 30px 0 16px;
             display: flex;
             justify-content: space-between;
+
+            .title {
+                padding-left: 0;
+                @media screen and (max-width: 610px) {
+                    font-size: 14px;;
+                }
+            }
+
             .link {
                 display: block;
                 color: #fff;
                 text-decoration: none;
                 margin-bottom: 8px;
+
+                @media screen and (max-width: 610px) {
+                    font-size: 12px;;
+                }
             }
         }
     }
 }
-
 
 @keyframes borderRotate {
     100% {

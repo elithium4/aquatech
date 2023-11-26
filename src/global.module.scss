@@ -1,0 +1,13 @@
+.mobileOnly {
+    display: none;
+    @media screen and (max-width: 430px) {
+        display: block;
+    }
+}
+
+.desktopOnly {
+    display: block;
+    @media screen and (max-width: 430px) {
+        display: none;
+    }
+}

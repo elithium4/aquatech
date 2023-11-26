@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/aquatech/static/css/main.a118076d.css",
-    "main.js": "/aquatech/static/js/main.0acf8522.js",
+    "main.css": "/aquatech/static/css/main.5dcd02dd.css",
+    "main.js": "/aquatech/static/js/main.2af54c83.js",
     "static/media/landing-big.png": "/aquatech/static/media/landing-big.5eb9e3faef71813b2ac3.png",
     "index.html": "/aquatech/index.html",
-    "main.a118076d.css.map": "/aquatech/static/css/main.a118076d.css.map",
-    "main.0acf8522.js.map": "/aquatech/static/js/main.0acf8522.js.map"
+    "main.5dcd02dd.css.map": "/aquatech/static/css/main.5dcd02dd.css.map",
+    "main.2af54c83.js.map": "/aquatech/static/js/main.2af54c83.js.map"
   },
   "entrypoints": [
-    "static/css/main.a118076d.css",
-    "static/js/main.0acf8522.js"
+    "static/css/main.5dcd02dd.css",
+    "static/js/main.2af54c83.js"
   ]
 }

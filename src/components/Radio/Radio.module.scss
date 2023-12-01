@@ -1,0 +1,21 @@
+.Radio {
+    .button {
+        display: none;
+
+        &:checked + label {
+            font-weight: 500;
+            background-color: #ffffff3a;
+        }
+    }
+
+    .label {
+        font-size: 20px;
+        display: inline-block;
+        padding: 8px;
+        border: 1px solid #fff;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}

@@ -3,6 +3,7 @@ import { Landing } from "./Landing/Landing";
 import { Products } from "./Products/Products";
 import { Policy } from "./Policy/Policy";
 import styles from "./App.module.scss";
+import { ProductPage } from "./ProductInfo/ProductInfo";
 
 function App() {
   return (
@@ -13,8 +14,9 @@ function App() {
       </header>
       <Routes>
         <Route path="/" Component={Landing} />
-        <Route path="/catalog" Component={Products} />
+        <Route path="/products" Component={Products} />
         <Route path="/policy" Component={Policy} />
+        <Route path="/products/:productName" Component={ProductPage} />
       </Routes>
     </div>
   );

@@ -1,3 +1,9 @@
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 90deg;
+    inherits: true;
+}
+
 .mobileOnly {
     display: none;
     @media screen and (max-width: 430px) {
@@ -9,5 +15,48 @@
     display: block;
     @media screen and (max-width: 430px) {
         display: none;
+    }
+}
+
+
+.prettyButton {
+    background-color: #000100;
+    margin: 0;
+    --angle: 90deg;
+    color: #fff;
+    text-decoration: none;
+    width: 300px;
+    box-sizing: border-box;
+    font-size: 20px;
+    text-align: center;
+    font-weight: 500;
+    letter-spacing: 2px;
+    display: block;
+    padding: 20px;
+    box-sizing: border-box;
+    border: 2px solid;
+    border-image: conic-gradient(
+            from var(--angle),
+            rgba(168, 239, 255, 0.1),
+            rgba(168, 239, 255, 1) 0.1turn,
+            rgba(168, 239, 255, 1) 0.15turn,
+            rgba(168, 239, 255, 0.1) 0.25turn
+        )
+        30;
+    animation: borderRotate 2.5s linear infinite forwards;
+
+    @media screen and (max-width: 610px) {
+        margin-top: 0;
+    }
+
+    &:hover {
+        cursor: pointer;
+        text-shadow: -2px 2px 2px #b2e7ebcb;
+    }
+}
+
+@keyframes borderRotate {
+    100% {
+        --angle: 420deg;
     }
 }

@@ -12,7 +12,7 @@ type Size = "s" | "m" | "l" | "xl";
 export const ProductPage = () => {
   const params = useParams();
   const [gender, setGender] = useState<Gender>("m");
-  const [size, setSize] = useState<Size | null>(null);
+  const [size, setSize] = useState<Size>("m");
   const [subtype, setSubtype] = useState<string>("");
   const [product, setProduct] = useState<ProductInfo | null>(null);
   const productType = params.productName;
@@ -35,11 +35,15 @@ export const ProductPage = () => {
     if (typeInfo?.extra) {
       setSubtype(typeInfo.extra.types[0].code);
     }
-  }, []);
+  }, [productType]);
 
   return (
     <div className={styles.ProductInfo}>
       <div className={styles.imageWrapper}>
+        <div className={`${globalCss.mobileOnly} ${styles.header}`}>
+          <Link to="/products" className={styles.returnLink} />
+          <h1 className={styles.title}>{product?.name}</h1>
+        </div>
         <img
           alt="Костюм"
           src={`./${productType}/${productType}${
@@ -49,7 +53,7 @@ export const ProductPage = () => {
         />
       </div>
       <div className={styles.information}>
-        <div className={styles.header}>
+        <div className={`${styles.header} ${globalCss.desktopOnly}`}>
           <Link to="/products" className={styles.returnLink} />
           <h1 className={styles.title}>{product?.name}</h1>
         </div>
@@ -123,11 +127,13 @@ export const ProductPage = () => {
             ))}
           </div>
         )}
-        <button className={globalCss.prettyButton}>Купить</button>
+        <div className={styles.purchase}>
+          <button className={globalCss.prettyButton}>Купить</button>
+        </div>
         <div className={styles.about}>
-        <p className={styles.subtitle}>О продукте</p>
+          <p className={styles.subtitle}>О продукте</p>
           <p className={styles.description}>{product?.descriptionFull}</p>
-          <p className={styles.subtitle}>Особенности:</p>
+          <p className={styles.subtitle}>Особенности</p>
           <ul className={styles.list}>
             {product?.features?.map((el) => (
               <li className={styles.item} key={Math.random()}>

@@ -5,7 +5,7 @@
 }
 
 .mobileOnly {
-    display: none!important;
+    display: none;
     @media screen and (max-width: 500px) {
         display: block;
     }
@@ -14,7 +14,7 @@
 .desktopOnly {
     display: block;
     @media screen and (max-width: 500px) {
-        display: none!important;
+        display: none;
     }
 }
 
